@@ -1,0 +1,25 @@
+<h2>Checking Account Activities</h2>
+
+<table class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Date</th>
+    <th>Deposit</th>
+    <th>Withdrawal</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let activity of activities">
+    <td>{{ activity.firstName }}</td>
+    <td>{{ activity.lastName }}</td>
+    <td>{{ activity.date }}</td>
+    <td>{{ activity.deposit }}</td>
+    <td>{{ activity.withdrawal }}</td>
+  </tr>
+  </tbody>
+</table>
+
+<!-- Add this button for downloading the PDF -->
+<button class="btn btn-success mt-2" (click)="downloadActivitiesReport()">Download PDF Report</button>
